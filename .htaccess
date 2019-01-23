@@ -1,0 +1,7 @@
+<IfModule mod_rewrite.c>
+    RewriteEngine on
+    RewriteRule ^$ webroot/ [L]
+#     all requests in goes to webroot dir
+    RewriteRule (.*) webroot/$1 [L]
+#     all parameters go there too
+</IfModule>
