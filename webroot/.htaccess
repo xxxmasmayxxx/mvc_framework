@@ -1,9 +1,6 @@
 <IfModule mod_rewrite.c>
     RewriteEngine on
-    RewriteCondew %{REQUEST_FILENAME} !-f
-#     if request not file
-    RewriteCondew %{REQUEST_FILENAME} !-d
-#     and not dir
-    RewriteRule ^(.*)$ index.php [PT, L]
-#     sent it to index.php
+    RewriteCond %{REQUEST_FILENAME} !-f
+    RewriteCond %{REQUEST_FILENAME} !-d
+    RewriteRule ^(.*)$ index.php [PT,L]
 </IfModule>
